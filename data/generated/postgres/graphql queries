@@ -1,0 +1,41 @@
+
+ mutation CreateUserMutation($input:CreateUserInput!){
+   createUser(input:$input){    
+   	user{
+       id
+       nickname
+     }
+    
+   }
+ }
+
+ mutation DeleteUserMutation($input:DeleteUserInput!){
+   deleteUser(input:$input){    
+   	user{
+       id
+       nickname
+     }
+    
+   }
+ }
+
+
+mutation UpdateUserMutation($input:UpdateUserInput!){
+  updateUser(input:$input){    
+  	user{
+      id
+      nickname
+    }
+    
+  }
+}
+
+query{
+   allUsers{
+     edges{
+       node{
+         id
+         nickname
+       }
+     }
+   }
